@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İstatistik Sayfası</h2>
+<div class="card text-white bg-primary mb-3" style="max-width: 100%;">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">
+        Toplam Proje Sayısı :
+        @ViewBag.TotalProjectCount
+    </h5>
+</div>
+<div class="card text-white bg-success mb-3" style="max-width: 100%;">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">
+        Toplam Referans Sayısı :
+        @ViewBag.TotalTestimonialCount
+    </h5>
+</div>
+<div class="card text-white bg-warning mb-3" style="max-width: 100%;">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">
+        Toplam Çalışma Günü :
+        @ViewBag.SumWorkDay
+    </h5>
+</div>
+<div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">
+        Ortalama Proje Çalışma Günü :
+        @ViewBag.AvgWorkDay
+    </h5>
+</div>
+<div class="card text-white bg-success mb-3" style="max-width: 100%;">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">
+        Ortalama Proje Fiyatı :
+        @ViewBag.AvgPrice
+    </h5>
+</div>
+<div class="card text-white bg-info mb-3" style="max-width: 100%;">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">
+        En Yüksek Fiyatlı Proje :
+        @ViewBag.MaxPricerProject
+    </h5>
+</div>
+<div class="card text-white bg-secondary mb-3" style="max-width: 100%;">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">
+        Asp.Net Proje Sayısı :
+        @ViewBag.CategoryCountByName
+    </h5>
+</div>
+

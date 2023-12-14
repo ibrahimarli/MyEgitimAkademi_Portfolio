@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7074fc448cf144eabb2aca8374fa2d8b" Name="Diagram1">
+        <EntityTypeShape EntityType="MyPortfolioDbModel.About" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Service" Width="1.5" PointX="3.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Testimonial" Width="1.5" PointX="6.25" PointY="1" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Category" Width="1.5" PointX="7.875" PointY="4.125" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Project" Width="1.5" PointX="10.125" PointY="3.875" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.sysdiagrams" Width="1.5" PointX="12.875" PointY="3.75" />
+        <AssociationConnector Association="MyPortfolioDbModel.FK_Project_Category" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Skill" Width="1.5" PointX="0.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
