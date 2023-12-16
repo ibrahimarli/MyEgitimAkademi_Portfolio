@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MyEgitimAkademi_Portfolio.Controllers
 {
-    public class RegisterControllerController : Controller
+    public class RegisterController : Controller
     {
         [HttpGet]
         public ActionResult Index()
