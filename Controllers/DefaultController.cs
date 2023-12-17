@@ -30,6 +30,8 @@ namespace MyEgitimAkademi_Portfolio.Controllers
         }
         public PartialViewResult PartialFeature()   
         {
+            ViewBag.Head = db.Feature.Select(x => x.FeatureHead).FirstOrDefault();
+            ViewBag.Body = db.Feature.Select(x => x.FeatureBody).FirstOrDefault();
             return PartialView();
         }
         public PartialViewResult PartialService() 

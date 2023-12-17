@@ -23,6 +23,9 @@
           <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Username" Type="nvarchar" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Adress">
           <Key>
@@ -50,6 +53,14 @@
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
           <Property Name="Subject" Type="nvarchar" MaxLength="100" />
           <Property Name="Message" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Feature">
+          <Key>
+            <PropertyRef Name="FeatureId" />
+          </Key>
+          <Property Name="FeatureId" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FeatureHead" Type="nvarchar" MaxLength="500" />
+          <Property Name="FeatureBody" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Project">
           <Key>
@@ -115,6 +126,7 @@
           <EntitySet Name="Adress" EntityType="Self.Adress" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Feature" EntityType="Self.Feature" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
@@ -162,6 +174,7 @@
           <EntitySet Name="Admin" EntityType="MyPortfolioDbModel.Admin" />
           <EntitySet Name="Adress" EntityType="MyPortfolioDbModel.Adress" />
           <EntitySet Name="Contact" EntityType="MyPortfolioDbModel.Contact" />
+          <EntitySet Name="Feature" EntityType="MyPortfolioDbModel.Feature" />
         </EntityContainer>
         <EntityType Name="Testimonial">
           <Key>
@@ -230,6 +243,9 @@
           <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Adress">
           <Key>
@@ -250,6 +266,14 @@
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Feature">
+          <Key>
+            <PropertyRef Name="FeatureId" />
+          </Key>
+          <Property Name="FeatureId" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FeatureHead" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="FeatureBody" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -331,6 +355,9 @@
           <EntitySetMapping Name="Admin">
             <EntityTypeMapping TypeName="MyPortfolioDbModel.Admin">
               <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="AdminId" ColumnName="AdminId" />
@@ -356,6 +383,15 @@
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Feature">
+            <EntityTypeMapping TypeName="MyPortfolioDbModel.Feature">
+              <MappingFragment StoreEntitySet="Feature">
+                <ScalarProperty Name="FeatureBody" ColumnName="FeatureBody" />
+                <ScalarProperty Name="FeatureHead" ColumnName="FeatureHead" />
+                <ScalarProperty Name="FeatureId" ColumnName="FeatureId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
